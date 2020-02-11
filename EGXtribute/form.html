@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Sign Up</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/brand.jpg" width="50" height="50" alt="" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="about.html">About</a>
+        <a class="nav-item nav-link" href="teams.html">Teams</a>
+        <a class="nav-item nav-link" href="games.html">Games</a>
+        <a class="nav-item nav-link" href="form.html">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="col-12">
+    <div class="card-body text-center">
+      <img src="images/brand.jpg" class = "image-fluid" width="10%" height="10%" alt="" />
+      <hr />
+      <h5 class="card-title">Please Fill Out The Form Below With Your Teams Details</h5>
+      <p class="card-text">
+        You Will Receive An E-mail Confirmation Shortly After Sumbitting
+      </p>
+    </div>
+    <hr />
+
+    <div class="col-12">
+      <form action="sent.html" method="get" id="contact" class="ui form" role="form">
+
+
+        <div class="inline field">
+          <label for="teamname" class="two wide field">Team Name</label>
+          <input type="text" name="teamname" id="teamname" class="eight wide field" data-h5-errorid="invalid-name" autofocus required pattern="[A-Z][a-z]+( [A-Z][a-z]+)*" title="Please Enter A Name With First Letter Capitalised!">
+          <div id="invalid-name" class="ui-state-error"></div>
+        </div>
+
+        <div class="inline field">
+          <label for="eventname" class="two wide field">Team Captain Name</label>
+          <input type="text" name="eventname" class="eight wide field" data-h5-errorid="invalid-event" required pattern="[A-Za-z0-9\ ]{3,}" title="Please Enter At Least 3 Characters!">
+          <div id="invalid-event" class="ui-state-error"></div>
+        </div>
+
+
+        <div class="inline field">
+          <label for="contact" class="two wide field">Contact Number</label>
+          <input class="eight wide field" type="tel" name="contact" id="telephone" data-h5-errorid="invalid-number" required pattern="^(\(\d{3}\)|\d{3})-?\d{6,}$" title="Please Enter A Nine Digit Phone Number!">
+          <div id="invalid-number" class="ui-state-error"></div>
+        </div>
+
+        <div class="inline field">
+          <label for="email" class="two wide field">Email Address</label>
+          <input type="email" name="email" id="email" class="eight wide field" data-h5-errorid="invalid-email" required pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" title="Please Enter A Valid Email!">
+          <div id="invalid-email" class="ui-state-error"></div>
+        </div>
+
+
+        <div class="inline field">
+          <label for="eventdate" class="two wide field">Which Day Would You Like To Compete? <br /> (18th - 20th Oct 19)</label>
+          <span class="ui calendar" id="date">
+            <span class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" id="date" placeholder="Date" class="eight wide field" data-h5-errorid="invalid-date" required title="Please Select A Date!">
+            </span>
+          </span>
+          <div id="invalid-date" class="ui-state-error"></div>
+        </div>
+
+        <div class="inline field">
+          <label for="region" class="two wide field">Where Does Your Team Originate From</label>
+          <select name="region" id="region" class="eight wide field">
+            <option value="South West">UK</option>
+            <option value="South East">Ireland</option>
+            <option value="Midlands">Online Friends Meeting At Event</option>
+            <option value="Central">Overseas</option>
+          </select>
+        </div>
+
+        <p>Please provide any other details you wish about your team. This is optional.</p>
+        <div class="inline field">
+          <label for="details" class="eight wide field">More details</label>
+          <textarea name="details" id="details"></textarea>
+        </div>
+
+        <p>Would you like to receive Newsletters from EGX, detailing upcoming events and special offers?</p>
+
+        <div class="grouped fields">
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="consent" id="yes" value="Yes" checked="checked">
+              <label for="yes">Yes, We Consent</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="consent" id="afternoon" value="No">
+              <label for="no">No, Do Not Send Emails</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="ui primary button">Send Us the Info</button>
+        <button type="reset" class="ui primary button">Clear the Info</button>
+
+    </div>
+  </div>
+
+  </form>
+  </div>
+
+  <hr />
+
+  <footer class="container-fluid bg-dark">
+    <p>
+      &copy; Kyle Fox 2019
+    </p>
+  </footer>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.h5validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
